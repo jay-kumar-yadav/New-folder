@@ -1,39 +1,626 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chapter 1</title>
+  <title>Chapter 1 Fun</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <style>
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
-<body class="bg-blue-50 min-h-screen overflow-hidden flex items-center justify-center p-4">
- <div id="page1" class="w-full flex flex-col justify-center items-center max-w-6xl bg-white rounded-xl shadow-lg p-6 text-center relative">
-  <h1 class="text-6xl font-bold text-red-800 mb-6">Chapter 1</h1>
-  <img src="Chapter 1.jpg" alt="Chapter 1 Image" class="mx-auto rounded-lg max-h-[400px]">
-  <button onclick="showPage2()" class="absolute bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
-    Next →
-  </button>
-</div>
 
+<body class="font-sans min-h-screen overflow-x-hidden relative">
+<!-- Background Image -->
+<div class="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat opacity-20" style="background-image: url('https://plus.unsplash.com/premium_photo-1677567996070-68fa4181775a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZWR1Y2F0aW9uYWx8ZW58MHx8MHx8fDA%3D');"></div>
 
-  <!-- Page 2 -->
-  <div id="page2" class="hidden w-full max-w-4xl bg-white rounded-xl shadow-lg p-6 text-center">
-    <h2 class="text-3xl font-semibold text-red-700 mb-6">Explore Chapter 1</h2>
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-lg">
-      <a href="https://youtu.be/sUf2PtEZris?si=q2UUMi6GNG21xSJ7" class="block bg-blue-100 hover:bg-blue-200 text-blue-900 px-4 py-3 rounded-md shadow-md">🎬 Video</a>
-      <a href="https://youtu.be/JGRUKdiUrfU?si=eI9IlHv0HvEURo-3" class="block bg-green-100 hover:bg-green-200 text-green-900 px-4 py-3 rounded-md shadow-md">🎭 Puppet Show</a>
-      <a href="https://puzzel.org/en" class="block bg-yellow-100 hover:bg-yellow-200 text-yellow-900 px-4 py-3 rounded-md shadow-md">🧩 Puzzle</a>
-      <a href="https://puzzel.org/en" class="block bg-purple-100 hover:bg-purple-200 text-purple-900 px-4 py-3 rounded-md shadow-md">🎨 Activities</a>
-      <a href="https://youtu.be/7u02PuGFhOE?si=cY-K9knsuU9rAh2Q" class="block bg-pink-100 hover:bg-pink-200 text-pink-900 px-4 py-3 rounded-md shadow-md">🃏 Hase Card</a>
+  <!-- PAGE 1 -->
+  <div id="page1" class="h-screen relative fade-in">
+    <h1 class="text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 drop-shadow-md text-center transition hover:scale-105">English</h1>
+    <h2 class="text-[40px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 drop-shadow-md text-center transition hover:scale-105">6th Class</h2>
+    <div class="flex flex-wrap justify-center gap-6 p-6">
+      <a href="javascript:void(0)" onclick="showPage2()"
+        class="text-2xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 drop-shadow-md text-center transition hover:scale-105">
+        Chapter 1
+      </a>
+
+      <a href="chapter2.html"
+        class="text-2xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 drop-shadow-md text-center transition hover:scale-105">
+        Chapter 2
+      </a>
+
+      <a href="chapter3.html"
+        class="text-2xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 drop-shadow-md text-center transition hover:scale-105">
+        Chapter 3
+      </a>
+
+      <a href="chapter4.html"
+        class="text-2xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 drop-shadow-md text-center transition hover:scale-105">
+        Chapter 4
+      </a>
     </div>
+
+    <!-- <img src="Chapter 1.jpg" alt="Dog Image"
+      class="rounded-3xl shadow-2xl border-8 border-white max-h-[65vh] hover:scale-105 transition-all duration-500"> -->
   </div>
 
-  <script>
-    function showPage2() {
-      document.getElementById('page1').classList.add('hidden');
-      document.getElementById('page2').classList.remove('hidden');
-    }
-  </script>
+  <!-- PAGE 2 -->
+  <div id="page2"
+    class="hidden min-h-screen p-8 flex flex-col items-center bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100 fade-in">
+    <h2
+      class="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-orange-500 mb-10 ">
+      Let's Explore Chapter 1
+    </h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl w-full">
+      <!-- Video Section -->
+      <div
+        class="bg-gradient-to-br from-blue-400 to-purple-400 text-white px-6 py-8 rounded-3xl shadow-xl font-bold text-center space-y-4">
+
+        <h3 class="text-2xl">🎬 Video</h3>
+
+        <!-- Option 1: Watch on YouTube -->
+        <a href="https://youtu.be/HnsSmOLdLbU?feature=shared" target="_blank"
+          class="block bg-white/20 px-4 py-2 rounded-lg shadow hover:scale-105 transition font-semibold">
+          ▶ Watch on YouTube
+        </a>
+
+        <!-- Option 2: Video Link -->
+        <a href="dog.mp4" target="_blank"
+          class="block bg-white/20 px-4 py-2 rounded-lg shadow hover:scale-105 transition font-semibold">
+          🎥 Video
+        </a>
+
+      </div>
+
+      <!-- Vocabulary -->
+      <div class="bg-gradient-to-br from-green-400 to-yellow-400 text-white px-6 py-8 rounded-3xl shadow-xl font-bold">
+        📚 Vocabulary
+        <details class="mt-4 bg-white/20 p-4 rounded-lg">
+          <summary class="cursor-pointer font-semibold text-lg">📖 Explore Vocabulary</summary>
+          <div class="mt-4 flex flex-col gap-3">
+            <!-- Flash Card with Video -->
+            <a href="video.mp4" target="_blank"
+              class="bg-gradient-to-r from-green-500 to-blue-500 px-4 py-2 rounded-lg shadow hover:scale-105 transition text-white font-semibold text-center">
+              🎴 Flash Card
+            </a>
+
+            <!-- Guess the Word -->
+            <a href="guess1.png" target="_blank"
+              class="bg-gradient-to-r from-yellow-500 to-orange-500 px-4 py-2 rounded-lg shadow hover:scale-105 transition text-white font-semibold text-center">
+              ❓ Guess the Word
+            </a>
+
+            <!-- Picture Word Guess -->
+            <a href="picture.png" target="_blank"
+              class="bg-gradient-to-r from-pink-500 to-purple-500 px-4 py-2 rounded-lg shadow hover:scale-105 transition text-white font-semibold text-center">
+              🖼 Picture Word Guess
+            </a>
+          </div>
+        </details>
+      </div>
+
+      <!-- 🧠Grammar Fun -->
+      <div
+        class="bg-gradient-to-br from-orange-400 to-pink-400 text-white px-6 py-8 rounded-3xl shadow-xl font-bold text-center hover:scale-105 transition space-y-4">
+        <h3 class="text-2xl"></h3>
+        <p class="text-sm font-medium text-white/90">🧠Grammer fun</p>
+
+        <!-- Worksheet Download -->
+        <a href="name.pdf" download
+          class="inline-block bg-white/20 px-6 py-3 rounded-full text-white font-semibold shadow-md hover:bg-white/30 transition">
+          📥 Worksheet
+        </a>
+        <!-- Grammar -->
+        <div
+          class="bg-gradient-to-br from-orange-400 to-pink-400 text-white px-6 py-8 rounded-3xl shadow-xl font-bold text-center space-y-6 hover:scale-105 transition">
+
+          </p>
+
+
+          <!-- Grammar Topics -->
+          <details class="bg-white/20 rounded-lg text-left p-4 cursor-pointer">
+            <summary class="font-semibold text-lg text-white cursor-pointer">📚 Grammar Topics</summary>
+            <div class="mt-3 text-white/90 text-sm space-y-3">
+
+              <div>
+                <b>1. Parts of Speech</b>
+                <ul class="list-disc ml-6">
+                  <li>Noun</li>
+                  <li>Pronoun</li>
+                  <li>Verb</li>
+                  <li>Adjective</li>
+                  <li>Adverb</li>
+                  <li>Preposition</li>
+                  <li>Conjunction</li>
+                  <li>Interjection</li>
+                </ul>
+              </div>
+
+              <div>
+                <b>2. Sentence Basics</b>
+                <ul class="list-disc ml-6">
+                  <li>Subject and Predicate</li>
+                  <li>Types of Sentences (Assertive, Interrogative, Imperative, Exclamatory)</li>
+                  <li>Sentence Formation and Reordering</li>
+                </ul>
+              </div>
+
+              <div>
+                <b>3. Tenses (Beginner)</b>
+                <ul class="list-disc ml-6">
+                  <li>Simple Present, Past, Future</li>
+                </ul>
+              </div>
+
+              <div>
+                <b>4. Articles</b>
+                <ul class="list-disc ml-6">
+                  <li>Use of A, An, The</li>
+                </ul>
+              </div>
+
+              <div>
+                <b>5. Punctuation</b>
+                <ul class="list-disc ml-6">
+                  <li>Capital letters, full stop, comma, question mark, exclamation mark</li>
+                </ul>
+              </div>
+
+              <div>
+                <b>6. Vocabulary Building</b>
+                <ul class="list-disc ml-6">
+                  <li>Synonyms</li>
+                  <li>Antonyms</li>
+                  <li>Homophones</li>
+                </ul>
+              </div>
+
+            </div>
+          </details>
+
+        </div>
+        <!-- Parts of speech -->
+        <details class="bg-white/20 rounded-lg text-left p-4 cursor-pointer">
+          <summary class="font-semibold text-lg text-white cursor-pointer">📚 Parts of speech </summary>
+          <div class="mt-3 text-white/90 text-sm space-y-3">
+
+            <!-- Noun with Links -->
+            <details class="ml-4 bg-white/10 p-3 rounded-lg">
+              <summary class="font-semibold text-white cursor-pointer">📝 1. Noun</summary>
+              <ul class="list-disc ml-6 mt-2 space-y-1">
+                <li><a href="https://youtu.be/IAxJoFNLqkk?si=yb6acO04_d_WSRA3" target="_blank"
+                    class="underline text-yellow-200">Video 1</a></li>
+                <li><a href="https://www.youtube.com/watch?v=6h3V-Tm_tNs&pp=ygUEbm91bg%3D%3D" target="_blank"
+                    class="underline text-yellow-200">Video 2</a></li>
+                <li><a href="https://www.youtube.com/watch?v=CMMZhAANKoM&pp=ygUFbm91bnM%3D" target="_blank"
+                    class="underline text-yellow-200">Video 3</a></li>
+                <li><a href="https://youtu.be/oeksdmgw3W4?si=mt4YrDSW38xcyjKR" target="_blank"
+                    class="underline text-yellow-200">Video 4</a></li>
+                <li><a href="https://youtu.be/aolmjyuViO8?si=hKwISPHryNNgsmLr" target="_blank"
+                    class="underline text-yellow-200">Video 5</a></li>
+                <li><a href="https://www.youtube.com/watch?v=WN_Z0syQSB4&pp=ygUFbm91bnM%3D" target="_blank"
+                    class="underline text-yellow-200">Video 6</a></li>
+                <li><a
+                    href="https://en.islcollective.com/english-esl-video-lessons/grammar-practice/general-grammar-practice/nouns/noun-quiz-grammar/745731"
+                    target="_blank" class="underline text-yellow-200">Noun Quiz</a></li>
+                <li><a href="https://www.youtube.com/watch?v=sCkC2GECfFk&pp=ygUOdHlwZXMgb2Ygbm91bnM%3D" target="_blank"
+                    class="underline text-yellow-200">Types of Nouns</a></li>
+                <li><a href="https://youtu.be/F0ESmyMenCQ" target="_blank" class="underline text-yellow-200">Extra Noun
+                    Video</a></li>
+              </ul>
+            </details>
+
+            <!-- Other Grammar Topics -->
+            <div>
+              <b>2. Pronoun</b>
+            </div>
+
+            <div>
+              <b>3. Verb</b>
+            </div>
+
+            <div>
+              <b>4. Adjective</b>
+            </div>
+
+            <div>
+              <b>5. Adverb</b>
+            </div>
+
+            <div>
+              <b>6. Preposition</b>
+            </div>
+
+            <div>
+              <b>7. Conjunction</b>
+            </div>
+
+            <div>
+              <b>8. Interjection</b>
+            </div>
+
+          </div>
+        </details>
+
+
+
+      </div>
+      <!-- Activities -->
+      <div class="bg-gradient-to-br from-purple-400 to-blue-400 text-white px-6 py-8 rounded-3xl shadow-xl font-bold">
+        🎨 Activities
+
+        <!-- Word Search Puzzle -->
+        <details class="mt-4 bg-white/20 p-4 rounded-lg">
+          <summary class="cursor-pointer font-semibold">🧩 Word Search Puzzle</summary>
+          <img src="Picture1.png" alt="Word Search Puzzle" class="mt-4 rounded-lg shadow-lg border-4 border-white">
+        </details>
+
+        <!-- Who Am I Game -->
+        <details class="mt-4 bg-white/20 p-4 rounded-lg">
+          <summary class="cursor-pointer font-semibold">🗣 Who Said to Whom? </summary>
+
+          <p class="mt-3 text-sm text-white/90">
+            <b>Objective:</b> Recall character traits and roles from the story <b>“The Dog Finds His Master”</b>.
+          </p>
+
+
+
+          <!-- Clues & Answers -->
+          <div class="mt-4 bg-white/10 rounded-lg p-3 space-y-2 text-sm">
+            <p>1. <b>Clue:</b> I am strong, but I fear the lion.<br> <b>Answer:</b> The Bear</p>
+            <p>2.<b>Clue:</b> I live in the forest. I am fierce and hunt alone. The dog asked to serve me first.<br>
+              <b>Answer:</b> The Wolf
+            </p>
+            <p>3.<b>Clue:</b> I am the king of the forest. I roar loudly, but even I’m scared of man.<br> <b>Answer:</b>
+              The Lion</p>
+            <p>4.<b>Clue:</b> I walk on two legs. I’m the only one the dog truly serves.<br> <b>Answer:</b> The Man</p>
+            <p>5.<b>Clue:</b> I searched for someone stronger than me and finally found one.<br> <b>Answer:</b> The Dog
+            </p>
+            <p>6.<b>Clue:</b> I said, “Let me be your servant,” many times until I found the strongest master.<br>
+              <b>Answer:</b> The Dog
+            </p>
+            <p>7.<b>Clue:</b> I told the dog, “Then why not be my servant?”<br> <b>Answer:</b> The Man</p>
+            <p>8.<b>Clue:</b> I was the first to become the dog’s master, but I couldn’t protect him from the bear.<br>
+              <b>Answer:</b> The Wolf
+            </p>
+          </div>
+        </details>
+
+        <!-- Who Said to Whom Activity -->
+        <details class="mt-4 bg-white/20 p-4 rounded-lg">
+          <summary class="cursor-pointer font-semibold">🗨 Who Said to Whom?</summary>
+
+          <!-- Example 1 -->
+          <div class="mt-3 bg-white/10 rounded-lg p-3 text-sm space-y-1">
+            <p> <b>1.I smell a man coming this way.”</b></p>
+            <p> <b>Who said it?</b> The Lion</p>
+            <p> <b>To whom?</b> The Dog</p>
+            <p> <b>Situation:</b> The lion sensed that a man was approaching and became afraid. He told the dog that it
+              wasn’t safe to stay there, and left the place. This made the dog realise that even the lion feared man,
+              and so he decided to serve the man instead.</p>
+          </div>
+
+          <!-- Fill-in Version -->
+          <div class="mt-4 bg-white/10 rounded-lg p-3 text-sm space-y-1">
+            <p> <b>2.I smell a man coming this way.”</b></p>
+            <p> <b>Who said it?</b> ________________</p>
+            <p> <b>To whom?</b> ________________</p>
+            <p> <b>Situation:</b> ____________________________________________</p>
+          </div>
+
+          <!-- Example 2 -->
+          <div class="mt-4 bg-white/10 rounded-lg p-3 text-sm space-y-1">
+            <p> <b>3.Then why not be my servant?”</b></p>
+            <p> <b>Who said it?</b> The Man</p>
+            <p> <b>To whom?</b> The Dog</p>
+            <p> <b>Situation:</b> After leaving the lion, the dog approached the man. Seeing the dog wanted to serve
+              someone strong, the man agreed and offered to make him his servant. From then on, the dog stayed with man
+              and served him faithfully.</p>
+          </div>
+
+          <!-- Fill-in Version -->
+          <div class="mt-4 bg-white/10 rounded-lg p-3 text-sm space-y-1">
+            <p> <b>4.Then why not be my servant?”</b></p>
+            <p> <b>Who said it?</b> ________________</p>
+            <p> <b>To whom?</b> ________________</p>
+            <p> <b>Situation:</b> ____________________________________________</p>
+          </div>
+        </details>
+      </div>
+
+
+
+      <!-- Quizzes -->
+      <div class="bg-gradient-to-br from-pink-500 to-orange-400 text-white px-6 py-8 rounded-3xl shadow-xl font-bold">
+        ❌✔ Quizzes
+        <details class="mt-4 bg-white/20 p-4 rounded-lg">
+          <summary class="cursor-pointer font-semibold">🎮 Blooket Quiz</summary>
+          <p class="mt-4 text-sm">
+            <b>Create Your Quiz:</b><br>
+            1️⃣ Go to <a href="https://www.blooket.com" target="_blank"
+              class="underline text-yellow-200">blooket.com</a>.<br>
+            2️⃣ screen recording <a href="screen.mp4" target="_blank"
+              class="underline text-yellow-200">Screen.com</a><br>
+            3️⃣ How to Make quiz: <i>Dog Finds His Master</i>.<a href="https://youtu.be/WM0wNk_1to0?feature=shared"
+              target="_black" class="underline text-yellow-200">make quiz.com</a>.<br>
+            <b>Play:</b> <a href="https://play.blooket.com" target="_blank"
+              class="underline text-yellow-200">play.blooket.com</a>
+          </p>
+        </details>
+      </div>
+      <!-- Value -->
+      <div
+        class="bg-gradient-to-br from-yellow-400 to-red-400 text-white px-6 py-8 rounded-3xl shadow-xl font-bold text-center hover:scale-105 transition space-y-4">
+        <h3 class="text-2xl">⭐ Value</h3>
+
+        <!-- Image -->
+        <img src="value.jpg" alt="Choosing Wisely"
+          class="rounded-xl shadow-lg border-4 border-white mx-auto max-h-48 object-cover">
+
+        <!-- Caption -->
+        <p class="mt-2 text-lg font-semibold">Choosing Wisely</p>
+      </div>
+      <!-- Worksheets -->
+      <button onclick="showPage3()"
+        class="bg-gradient-to-br from-green-400 to-yellow-400 text-white px-6 py-8 rounded-3xl shadow-xl font-bold">
+        🖊 Worksheets
+      </button>
+    </div>
+    <button onclick="showPage1()"
+      class="mt-10 bg-gradient-to-r from-gray-500 to-gray-700 text-white px-8 py-4 rounded-full shadow-lg font-bold">
+      ⬅ Back
+    </button>
+  </div>
+
+
+  <!-- PAGE 3 -->
+  <div id="page3"
+    class="hidden min-h-screen p-8 flex flex-col items-center bg-gradient-to-br from-green-100 via-blue-100 to-purple-100 fade-in">
+    <h2
+      class="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-purple-500 mb-6 ">
+      📝 Worksheets & Sequence Activity
+    </h2>
+    <div class="max-w-4xl w-full bg-white/70 rounded-3xl shadow-2xl p-6 space-y-8">
+      <!-- Sequence Challenge -->
+      <div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">📜 Sequence Challenge</h3>
+        <img src="Picture2.png"
+          class="rounded-xl shadow-lg border-4 border-white cursor-pointer hover:scale-105 transition"
+          onclick="openPopup('Picture2.png')">
+        <img src="Picture3.png"
+          class="rounded-xl shadow-lg border-4 border-white cursor-pointer hover:scale-105 transition mt-4"
+          onclick="openPopup('Picture3.png')">
+      </div>
+      <!-- Worksheets -->
+      <div>
+
+
+        <!-- Download Button -->
+        <a href="worksheet.pdf" download
+          class="mt-4 inline-block bg-gradient-to-r from-green-400 to-blue-400 text-white px-8 py-3 rounded-full font-bold shadow-lg">
+          📥 Worksheets
+        </a>
+
+        <!-- Activities Section -->
+        <div class="mt-8 bg-white rounded-2xl shadow-lg p-6 space-y-6">
+
+          <!-- One-Sentence Story Challenge -->
+          <div>
+            <h4 class="text-lg font-semibold text-green-600">📝 One-Sentence Story Challenge</h4>
+            <p class="text-gray-700 text-sm">
+              Students sit in a circle, and each says one sentence from the story <b>“The Dog Finds His Master”</b> in
+              sequence.
+              Encourages listening, sequencing, and creativity.
+            </p>
+          </div>
+
+          <!-- Fill in the Blanks -->
+          <div>
+            <h4 class="text-lg font-semibold text-blue-600">✏ Fill in the Blanks</h4>
+            <ol class="list-decimal ml-6 text-gray-700 text-sm space-y-1">
+              <li>The dog was tired of living all by __________.</li>
+              <li>The dog wanted to find a strong __________.</li>
+              <li>The dog first met a __________ in the forest.</li>
+              <li>The wolf agreed to be the dog’s __________.</li>
+              <li>The dog left the wolf because he was afraid of the __________.</li>
+              <li>The bear was stronger than the __________.</li>
+              <li>The bear ran away when he saw a __________.</li>
+              <li>The lion was known as the king of the __________.</li>
+              <li>The lion refused to go near the __________.</li>
+              <li>Finally, the dog decided to follow the __________.</li>
+            </ol>
+          </div>
+
+          <!-- Multiple Choice Questions -->
+          <div>
+            <h4 class="text-lg font-semibold text-purple-600">🎯 Multiple Choice Questions</h4>
+            <ol class="list-decimal ml-6 text-gray-700 text-sm space-y-1">
+              <li>Why did the dog want a master? <br>
+                a) Fight other animals b) Get more food c) Be protected d) Become famous
+              </li>
+              <li>Which animal did the dog meet first?<br>
+                a) Bear b) Man c) Wolf d) Lion
+              </li>
+              <li>What made the dog leave the wolf? <br>
+                a) Lazy b) Scared of bear c) Too fast d) Didn’t share food
+              </li>
+              <li>Who was stronger than the wolf? <br>
+                a) Dog b) Fox c) Bear d) Man
+              </li>
+              <li>Why did the dog stop following the bear? <br>
+                a) Growled b) Weak c) Ran from lion d) Asleep
+              </li>
+              <li>What title did the lion have? <br>
+                a) King of skies , b) King of jungle c) Friend of animals d) Ruler of rivers
+              </li>
+              <li>What did the lion fear? <br>
+                a) Thunder b) Man c) Tiger d) Snake
+              </li>
+              <li>What did the dog notice about man? <br>
+                a) Kind b) Afraid of animals c) Everyone feared him d) Ran fast
+              </li>
+              <li>Who was the final master the dog chose? <br>
+                a) Bear b) Lion c) Wolf d) Man
+              </li>
+              <li>Main idea of the story? <br>
+                a) Be strong b) Animals are dangerous c) Dogs are loyal d) Love the forest
+              </li>
+            </ol>
+          </div>
+
+          <!-- True or False -->
+          <div>
+            <h4 class="text-lg font-semibold text-pink-600">✅ True or False</h4>
+            <ul class="list-disc ml-6 text-gray-700 text-sm space-y-1">
+              <li>Dog was happy living alone</li>
+              <li>Wolf was stronger than dog</li>
+              <li>Bear was scared of lion</li>
+              <li>Lion chased the bear away</li>
+              <li>Lion was afraid of man</li>
+              <li>Dog chose wolf as final master</li>
+              <li>Story shows how dogs became pets</li>
+              <li>Lion was friendly to all animals</li>
+              <li>Dog looked for someone weaker</li>
+              <li>Dog found the strongest master</li>
+            </ul>
+          </div>
+
+          <!-- Match the Following -->
+          <div>
+            <h4 class="text-lg font-semibold text-yellow-600">🔗 Match the Following</h4>
+            <table class="w-full text-sm text-left border border-gray-200 rounded-lg">
+              <thead class="bg-gray-100">
+                <tr>
+                  <th class="p-2">Column A</th>
+                  <th class="p-2">Column B</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-2">Dog</td>
+                  <td class="p-2">Ran from the lion</td>
+                </tr>
+                <tr>
+                  <td class="p-2">Wolf</td>
+                  <td class="p-2">Became dog’s final master</td>
+                </tr>
+                <tr>
+                  <td class="p-2">Bear</td>
+                  <td class="p-2">Was scared of bear</td>
+                </tr>
+                <tr>
+                  <td class="p-2">Lion</td>
+                  <td class="p-2"> Quality dog was searching for</td>
+                </tr>
+                <tr>
+                  <td class="p-2">Man</td>
+                  <td class="p-2">What the dog became at the end</td>
+                </tr>
+                <tr>
+                  <td class="p-2">Forest</td>
+                  <td class="p-2">How the dog felt at first</td>
+                </tr>
+                <tr>
+                  <td class="p-2">Strong</td>
+                  <td class="p-2">Where the dog’s journey began</td>
+                </tr>
+                <tr>
+                  <td class="p-2">Alone</td>
+                  <td class="p-2">Afraid of man</td>
+                </tr>
+                <tr>
+                  <td class="p-2">Loyal</td>
+                  <td class="p-2">What the dog went on to find a master</td>
+                </tr>
+                <tr>
+                  <td class="p-2">Journey</td>
+                  <td class="p-2">Wanted a strong master</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Odd One Out -->
+          <div>
+            <h4 class="text-lg font-semibold text-red-600">🔍 Odd One Out</h4>
+            <ul class="list-disc ml-6 text-gray-700 text-sm space-y-1">
+              <li>Dog – Wolf – Bear – Tree</li>
+              <li>Man – Lion – Bear – Snake</li>
+              <li>Afraid – Strong – Brave – Forest</li>
+              <li>Wolf – Bear – Lion – Apple</li>
+              <li>Run – Follow – Sleep – Book</li>
+              <li>Loyal – Master – Pet – Danger</li>
+              <li>Stick – Claw – Tooth – Paw</li>
+              <li>King – Ruler – Master – Friend</li>
+              <li>Dog – Monkey – Wolf – Lion</li>
+              <li>Forest – Road – Jungle – Mountain</li>
+            </ul>
+          </div>
+
+          <!-- Answer Key -->
+          <div class="mt-10 bg-gray-50 rounded-xl p-4 border border-gray-200">
+            <h4 class="text-lg font-semibold text-gray-800">📌 Answer Key</h4>
+
+            <p class="mt-2 text-gray-700 text-sm">
+              <b>Fill in the Blanks:</b> 1) himself 2) master 3) wolf 4) master 5) bear 6) wolf 7) lion 8) jungle 9) man
+              10) man
+            </p>
+
+            <p class="mt-2 text-gray-700 text-sm">
+              <b>Multiple Choice:</b> 1) c 2) c 3) b 4) c 5) c 6) b 7) b 8) c 9) d 10) c
+            </p>
+
+            <p class="mt-2 text-gray-700 text-sm">
+              <b>True/False:</b> F, T, T, F, T, F, T, F, F, T
+            </p>
+
+            <p class="mt-2 text-gray-700 text-sm">
+              <b>Match the Following:</b> Dog → Wanted a strong master; Wolf → Was scared of bear; Bear → Ran from lion;
+              Lion → Afraid of man; Man → Became final master; Forest → Journey began; Strong → Quality searched for;
+              Alone → How dog felt; Loyal → What dog became; Journey → To find a master
+            </p>
+
+            <p class="mt-2 text-gray-700 text-sm">
+              <b>Odd One Out:</b> Tree, Man, Forest, Apple, Book, Danger, Stick, Friend, Monkey, Road
+            </p>
+          </div>
+        </div>
+
+
+
+        <button onclick="showPage2()"
+          class="mt-8 bg-gradient-to-r from-gray-500 to-gray-700 text-white px-8 py-4 rounded-full shadow-lg font-bold">
+          ⬅ Back to Menu
+        </button>
+      </div>
+
+      <!-- POPUP MODAL -->
+      <div id="popup" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+        <img id="popup-img" src="" class="max-w-4xl max-h-[90vh] rounded-lg shadow-2xl border-4 border-white">
+      </div>
+
+      <script>
+        function showPage2() { document.getElementById('page1').classList.add('hidden'); document.getElementById('page3').classList.add('hidden'); document.getElementById('page2').classList.remove('hidden'); }
+        function showPage1() { document.getElementById('page2').classList.add('hidden'); document.getElementById('page3').classList.add('hidden'); document.getElementById('page1').classList.remove('hidden'); }
+        function showPage3() { document.getElementById('page2').classList.add('hidden'); document.getElementById('page1').classList.add('hidden'); document.getElementById('page3').classList.remove('hidden'); }
+        function openPopup(src) { document.getElementById('popup').classList.remove('hidden'); document.getElementById('popup-img').src = src; }
+        document.getElementById('popup').addEventListener('click', () => document.getElementById('popup').classList.add('hidden'));
+      </script>
 
 </body>
+
 </html>
