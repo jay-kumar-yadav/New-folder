@@ -3,9 +3,655 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Interactive Lesson Plan: March Poem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'spring': {
+                            100: '#f0fdf4',
+                            200: '#dcfce7',
+                            300: '#bbf7d0',
+                            400: '#86efac',
+                            500: '#4ade80',
+                            600: '#22c55e',
+                            700: '#16a34a',
+                            800: '#15803d',
+                            900: '#166534',
+                        },
+                        'sky': {
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .poem-line {
+            transition: all 0.3s ease;
+        }
+        .poem-line:hover {
+            transform: translateX(5px);
+            color: #166534;
+        }
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .tab-active {
+            border-bottom: 3px solid #166534;
+            color: #166534;
+            font-weight: 600;
+        }
+    </style>
 </head>
-<body>
-    <div>chapter 3</div>
+<body class="font-sans bg-spring-100 text-gray-800">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="mb-12 text-center">
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-sky-800 mb-2">Spring Awakening</h1>
+            <h2 class="text-2xl font-semibold text-spring-600">Exploring the Poem "March"</h2>
+            <div class="w-24 h-1 bg-spring-400 mx-auto mt-4"></div>
+        </header>
+
+        <!-- Lesson Overview -->
+        <section class="bg-white rounded-xl shadow-md overflow-hidden mb-12">
+            <div class="md:flex">
+                <div class="md:w-1/3 bg-sky-700 p-6 flex items-center">
+                    <div>
+                        <h3 class="font-serif text-2xl text-white mb-4">Lesson Overview</h3>
+                        <p class="text-sky-100">A comprehensive exploration of the poem "March" focusing on seasonal changes, poetic devices, and nature's awakening in spring.</p>
+                    </div>
+                </div>
+                <div class="md:w-2/3 p-6">
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-spring-50 p-4 rounded-lg border border-spring-200">
+                            <h4 class="font-semibold text-sky-700 mb-2">Grade</h4>
+                            <p>Class 6</p>
+                        </div>
+                        <div class="bg-spring-50 p-4 rounded-lg border border-spring-200">
+                            <h4 class="font-semibold text-sky-700 mb-2">Subject</h4>
+                            <p>English Literature</p>
+                        </div>
+                        <div class="bg-spring-50 p-4 rounded-lg border border-spring-200">
+                            <h4 class="font-semibold text-sky-700 mb-2">Duration</h4>
+                            <p>2 Sessions (90 mins)</p>
+                        </div>
+                        <div class="bg-spring-50 p-4 rounded-lg border border-spring-200">
+                            <h4 class="font-semibold text-sky-700 mb-2">Theme</h4>
+                            <p>Seasonal Changes</p>
+                        </div>
+                        <div class="bg-spring-50 p-4 rounded-lg border border-spring-200">
+                            <h4 class="font-semibold text-sky-700 mb-2">Skills</h4>
+                            <p>Poetic Analysis, Creative Expression</p>
+                        </div>
+                        <div class="bg-spring-50 p-4 rounded-lg border border-spring-200">
+                            <h4 class="font-semibold text-sky-700 mb-2">Resources</h4>
+                            <p>Poem text, Nature images, Art supplies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Poem Display -->
+        <section class="mb-12 bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="p-6">
+                <h2 class="font-serif text-3xl text-sky-800 mb-6 text-center">The Poem: "March"</h2>
+                <div class="bg-spring-50 p-6 rounded-lg border border-spring-200 mb-6">
+                    <div class="space-y-4 italic text-lg text-gray-700">
+                        <p class="poem-line">The cock is crowing,</p>
+                        <p class="poem-line">The stream is flowing,</p>
+                        <p class="poem-line">The small birds twitter,</p>
+                        <p class="poem-line">The lake doth glitter,</p>
+                        <p class="poem-line">The green field sleeps in the sun;</p>
+                        <p class="poem-line">The oldest and youngest</p>
+                        <p class="poem-line">Are at work with the strongest;</p>
+                        <p class="poem-line">The cattle are grazing,</p>
+                        <p class="poem-line">Their heads never raising;</p>
+                        <p class="poem-line">There are forty feeding like one!</p>
+                        <p class="poem-line">Like an army defeated</p>
+                        <p class="poem-line">The snow hath retreated,</p>
+                        <p class="poem-line">And now doth fare ill</p>
+                        <p class="poem-line">On the top of the bare hill;</p>
+                        <p class="poem-line">The ploughboy is whooping—anon—anon:</p>
+                        <p class="poem-line">There's joy in the mountains;</p>
+                        <p class="poem-line">There's life in the fountains;</p>
+                        <p class="poem-line">Small clouds are sailing,</p>
+                        <p class="poem-line">Blue sky prevailing,</p>
+                        <p class="poem-line">The rain is over and gone!</p>
+                    </div>
+                </div>
+                <div class="flex justify-center space-x-4">
+                    <button class="px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition">
+                        Listen to Audio
+                    </button>
+                    <button class="px-4 py-2 bg-spring-600 text-white rounded-lg hover:bg-spring-700 transition">
+                        Read Aloud
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Tabs -->
+        <section class="mb-12">
+            <div class="flex border-b border-gray-200 mb-6">
+                <button class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-sky-700" onclick="openTab('lesson-plan')">
+                    Lesson Plan
+                </button>
+                <button class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-sky-700" onclick="openTab('activities')">
+                    Activities
+                </button>
+                <button class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-sky-700" onclick="openTab('resources')">
+                    Resources
+                </button>
+                <button class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-sky-700" onclick="openTab('assessment')">
+                    Assessment
+                </button>
+            </div>
+
+            <!-- Lesson Plan Tab -->
+            <div id="lesson-plan" class="tab-content bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-serif text-2xl text-sky-800 mb-4">Lesson Plan</h3>
+                
+                <div class="overflow-x-auto mb-8">
+                    <table class="min-w-full border-collapse">
+                        <thead>
+                            <tr class="bg-sky-100">
+                                <th class="p-3 text-left text-sky-800">Time</th>
+                                <th class="p-3 text-left text-sky-800">Teacher Activity</th>
+                                <th class="p-3 text-left text-sky-800">Student Activity</th>
+                                <th class="p-3 text-left text-sky-800">Learning Outcome</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-spring-50">
+                                <td class="p-3">5 min</td>
+                                <td class="p-3">Greet students and set positive tone</td>
+                                <td class="p-3">Respond to greeting, prepare for lesson</td>
+                                <td class="p-3">Establish welcoming environment</td>
+                            </tr>
+                            <tr class="hover:bg-spring-50">
+                                <td class="p-3">10 min</td>
+                                <td class="p-3">Introduce the poem and its theme</td>
+                                <td class="p-3">Listen attentively, share initial thoughts</td>
+                                <td class="p-3">Understand poem's context</td>
+                            </tr>
+                            <tr class="hover:bg-spring-50">
+                                <td class="p-3">15 min</td>
+                                <td class="p-3">Read poem aloud with expression</td>
+                                <td class="p-3">Follow along, visualize imagery</td>
+                                <td class="p-3">Develop poetic appreciation</td>
+                            </tr>
+                            <tr class="hover:bg-spring-50">
+                                <td class="p-3">20 min</td>
+                                <td class="p-3">Guide line-by-line discussion</td>
+                                <td class="p-3">Analyze meaning, identify devices</td>
+                                <td class="p-3">Understand poetic techniques</td>
+                            </tr>
+                            <tr class="hover:bg-spring-50">
+                                <td class="p-3">20 min</td>
+                                <td class="p-3">Facilitate creative activities</td>
+                                <td class="p-3">Draw, act out, or write responses</td>
+                                <td class="p-3">Express understanding creatively</td>
+                            </tr>
+                            <tr class="hover:bg-spring-50">
+                                <td class="p-3">10 min</td>
+                                <td class="p-3">Summarize key learnings</td>
+                                <td class="p-3">Reflect on lesson, ask questions</td>
+                                <td class="p-3">Consolidate understanding</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-spring-50 p-6 rounded-lg border border-spring-200">
+                        <h4 class="font-serif text-xl text-sky-700 mb-3">Teaching Points</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-spring-600 mr-2">✓</span>
+                                <span>Understanding seasonal changes through poetry</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-spring-600 mr-2">✓</span>
+                                <span>Identifying poetic devices (simile, personification)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-spring-600 mr-2">✓</span>
+                                <span>Appreciating nature's awakening in spring</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-spring-600 mr-2">✓</span>
+                                <span>Connecting poetry to personal experiences</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-sky-50 p-6 rounded-lg border border-sky-200">
+                        <h4 class="font-serif text-xl text-sky-700 mb-3">Key Questions</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-sky-600 mr-2">•</span>
+                                <span>How does the poet describe nature's changes in March?</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-sky-600 mr-2">•</span>
+                                <span>What comparisons does the poet make (similes)?</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-sky-600 mr-2">•</span>
+                                <span>Which lines show personification? How does it help?</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-sky-600 mr-2">•</span>
+                                <span>What mood does the poem create? How?</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activities Tab -->
+            <div id="activities" class="tab-content hidden bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-serif text-2xl text-sky-800 mb-6">Interactive Activities</h3>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Activity 1 -->
+                    <div class="activity-card bg-white border border-spring-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                        <div class="bg-spring-600 p-4 text-white">
+                            <h4 class="font-serif text-xl">Nature Drawing</h4>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-3">Students draw scenes from the poem, labeling with poetic lines.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm bg-spring-100 text-spring-800 px-2 py-1 rounded">Art Integration</span>
+                                <span class="text-sm text-gray-500">30 mins</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity 2 -->
+                    <div class="activity-card bg-white border border-sky-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                        <div class="bg-sky-600 p-4 text-white">
+                            <h4 class="font-serif text-xl">Poem Performance</h4>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-3">Groups perform stanzas with actions and sound effects.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm bg-sky-100 text-sky-800 px-2 py-1 rounded">Drama</span>
+                                <span class="text-sm text-gray-500">25 mins</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity 3 -->
+                    <div class="activity-card bg-white border border-spring-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                        <div class="bg-spring-500 p-4 text-white">
+                            <h4 class="font-serif text-xl">Poetic Devices Hunt</h4>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-3">Students identify and highlight similes, personification in poem.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm bg-spring-100 text-spring-800 px-2 py-1 rounded">Analysis</span>
+                                <span class="text-sm text-gray-500">20 mins</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity 4 -->
+                    <div class="activity-card bg-white border border-sky-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                        <div class="bg-sky-500 p-4 text-white">
+                            <h4 class="font-serif text-xl">Spring Acrostic</h4>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-3">Create acrostic poems using "MARCH" or "SPRING".</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm bg-sky-100 text-sky-800 px-2 py-1 rounded">Creative Writing</span>
+                                <span class="text-sm text-gray-500">15 mins</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity 5 -->
+                    <div class="activity-card bg-white border border-spring-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                        <div class="bg-spring-400 p-4 text-white">
+                            <h4 class="font-serif text-xl">Nature Journal</h4>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-3">Write observations of seasonal changes in local environment.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm bg-spring-100 text-spring-800 px-2 py-1 rounded">Science Connection</span>
+                                <span class="text-sm text-gray-500">Homework</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity 6 -->
+                    <div class="activity-card bg-white border border-sky-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                        <div class="bg-sky-400 p-4 text-white">
+                            <h4 class="font-serif text-xl">Poem Puzzle</h4>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-3">Reconstruct poem from mixed-up lines in correct order.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm bg-sky-100 text-sky-800 px-2 py-1 rounded">Comprehension</span>
+                                <span class="text-sm text-gray-500">15 mins</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources Tab -->
+            <div id="resources" class="tab-content hidden bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-serif text-2xl text-sky-800 mb-6">Teaching Resources</h3>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-spring-50 p-6 rounded-lg border border-spring-200">
+                        <h4 class="font-serif text-xl text-sky-700 mb-3">Printable Materials</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <span class="mr-3 text-spring-600">📄</span>
+                                <span>Full poem text with annotation space</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-3 text-spring-600">🎨</span>
+                                <span>Nature scene drawing templates</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-3 text-spring-600">🔍</span>
+                                <span>Poetic devices worksheet</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-3 text-spring-600">✏️</span>
+                                <span>Vocabulary matching exercise</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-sky-50 p-6 rounded-lg border border-sky-200">
+                        <h4 class="font-serif text-xl text-sky-700 mb-3">Digital Resources</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <span class="mr-3 text-sky-600">🎧</span>
+                                <span>Audio recording of poem</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-3 text-sky-600">📹</span>
+                                <span>Video of spring nature scenes</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-3 text-sky-600">🖥️</span>
+                                <span>Interactive poetic devices quiz</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-3 text-sky-600">🌐</span>
+                                <span>Virtual field trip to countryside</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                        <h4 class="font-serif text-xl text-sky-700 mb-3">Word Bank</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-spring-100 text-spring-800 rounded-full">Crowing</span>
+                            <span class="px-3 py-1 bg-spring-100 text-spring-800 rounded-full">Glitter</span>
+                            <span class="px-3 py-1 bg-spring-100 text-spring-800 rounded-full">Twitter</span>
+                            <span class="px-3 py-1 bg-spring-100 text-spring-800 rounded-full">Retreated</span>
+                            <span class="px-3 py-1 bg-spring-100 text-spring-800 rounded-full">Grazing</span>
+                            <span class="px-3 py-1 bg-spring-100 text-spring-800 rounded-full">Ploughboy</span>
+                            <span class="px-3 py-1 bg-spring-100 text-spring-800 rounded-full">Prevailing</span>
+                            <span class="px-3 py-1 bg-spring-100 text-spring-800 rounded-full">Fountains</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                        <h4 class="font-serif text-xl text-sky-700 mb-3">Poetic Devices</h4>
+                        <div class="space-y-3">
+                            <div>
+                                <h5 class="font-medium text-spring-700">Simile:</h5>
+                                <p class="text-sm italic">"Like an army defeated"</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-spring-700">Personification:</h5>
+                                <p class="text-sm italic">"The green field sleeps in the sun"</p>
+                            </div>
+                            <div>
+                                <h5 class="font-medium text-spring-700">Alliteration:</h5>
+                                <p class="text-sm italic">"The small birds twitter"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assessment Tab -->
+            <div id="assessment" class="tab-content hidden bg-white rounded-xl shadow-md p-6">
+                <h3 class="font-serif text-2xl text-sky-800 mb-6">Assessment Tools</h3>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-spring-50 p-6 rounded-lg border border-spring-200">
+                        <h4 class="font-serif text-xl text-sky-700 mb-3">Formative Assessment</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-spring-600 mr-2">•</span>
+                                <span>Observation during activities</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-spring-600 mr-2">•</span>
+                                <span>Questioning throughout lesson</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-spring-600 mr-2">•</span>
+                                <span>Participation in discussions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-spring-600 mr-2">•</span>
+                                <span>Quality of creative responses</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-sky-50 p-6 rounded-lg border border-sky-200">
+                        <h4 class="font-serif text-xl text-sky-700 mb-3">Summative Assessment</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-sky-600 mr-2">•</span>
+                                <span>Completed worksheets</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-sky-600 mr-2">•</span>
+                                <span>Performance of poem interpretation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-sky-600 mr-2">•</span>
+                                <span>Nature journal entries</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-sky-600 mr-2">•</span>
+                                <span>End-of-unit quiz</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm mb-6">
+                    <h4 class="font-serif text-xl text-sky-700 mb-3">Evaluation Rubric</h4>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full border-collapse">
+                            <thead>
+                                <tr class="bg-sky-100">
+                                    <th class="p-3 text-left text-sky-800">Criteria</th>
+                                    <th class="p-3 text-left text-sky-800">Excellent (4)</th>
+                                    <th class="p-3 text-left text-sky-800">Proficient (3)</th>
+                                    <th class="p-3 text-left text-sky-800">Developing (2)</th>
+                                    <th class="p-3 text-left text-sky-800">Beginning (1)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="p-3 font-medium">Understanding</td>
+                                    <td class="p-3">Deep comprehension of poem's themes</td>
+                                    <td class="p-3">Good grasp of main ideas</td>
+                                    <td class="p-3">Basic understanding</td>
+                                    <td class="p-3">Limited understanding</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="p-3 font-medium">Analysis</td>
+                                    <td class="p-3">Identifies all poetic devices accurately</td>
+                                    <td class="p-3">Identifies most devices</td>
+                                    <td class="p-3">Identifies some devices</td>
+                                    <td class="p-3">Struggles to identify devices</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-medium">Creativity</td>
+                                    <td class="p-3">Highly original interpretations</td>
+                                    <td class="p-3">Creative responses</td>
+                                    <td class="p-3">Some creative elements</td>
+                                    <td class="p-3">Little creativity shown</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="p-3 font-medium">Participation</td>
+                                    <td class="p-3">Highly engaged throughout</td>
+                                    <td class="p-3">Active participant</td>
+                                    <td class="p-3">Occasionally participates</td>
+                                    <td class="p-3">Rarely participates</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-spring-50 p-6 rounded-lg border border-spring-200">
+                        <h4 class="font-serif text-xl text-sky-700 mb-3">Homework Assignment</h4>
+                        <p class="mb-3">Draw a spring scene showing what happens in nature during March and label it with two lines from the poem.</p>
+                        <div class="text-sm text-spring-700">
+                            <p class="font-medium">Extension:</p>
+                            <p>Write a short paragraph comparing March in the poem to March in your local area.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-sky-50 p-6 rounded-lg border border-sky-200">
+                        <h4 class="font-serif text-xl text-sky-700 mb-3">Reflection Questions</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-sky-600 mr-2">•</span>
+                                <span>Which part of the poem resonated most with you? Why?</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-sky-600 mr-2">•</span>
+                                <span>How does understanding poetic devices change how you read poetry?</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-sky-600 mr-2">•</span>
+                                <span>What connections can you make between the poem and your own experiences?</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Objectives -->
+        <section class="mb-12 bg-gradient-to-r from-sky-600 to-spring-600 rounded-xl shadow-md overflow-hidden">
+            <div class="p-8 text-white">
+                <h2 class="font-serif text-3xl mb-6">Learning Objectives</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-medium mb-3">By the end of this lesson, students will be able to:</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="mr-2">✓</span>
+                                <span>Analyze the poem's imagery and themes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2">✓</span>
+                                <span>Identify and explain poetic devices</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2">✓</span>
+                                <span>Connect the poem to seasonal changes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2">✓</span>
+                                <span>Express interpretations creatively</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium mb-3">Key Skills Developed:</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="mr-2">✓</span>
+                                <span>Critical reading and analysis</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2">✓</span>
+                                <span>Creative expression through multiple media</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2">✓</span>
+                                <span>Collaborative learning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2">✓</span>
+                                <span>Observation of natural phenomena</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-600 text-sm">
+            <p>© 2025 Interactive Poetry Lesson Plan | Designed for Class 6 English</p>
+            <p class="mt-1">Spring Awakening: Exploring "March" by William Wordsworth</p>
+        </footer>
+    </div>
+
+    <script>
+        // Tab functionality
+        function openTab(tabName) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.add("hidden");
+            }
+            
+            const tabButtons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("tab-active");
+            }
+            
+            document.getElementById(tabName).classList.remove("hidden");
+            event.currentTarget.classList.add("tab-active");
+        }
+
+        // Set first tab as active by default
+        document.addEventListener("DOMContentLoaded", function() {
+            const firstTab = document.querySelector(".tab-btn");
+            if (firstTab) {
+                firstTab.classList.add("tab-active");
+            }
+        });
+    </script>
 </body>
 </html>
